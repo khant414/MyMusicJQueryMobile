@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Music</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="javascripts/index.js"></script>
+  <script src="https://kit.fontawesome.com/b6c9dbe80b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+
+</head>
+
+<body>
+
+  <!--Home Start-->
+  <div data-role="page" id="home">
+
+    <!--Home Header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Home</h1>
+      <!--Home Navbar -->
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+        <li><a href="#home" class='active-page' data-icon="home">Home Page</a></li>
+        <li><a href="#Load" data-icon="plus">Add a Song</a></li>
+        <li><a href="#ListMusic" data-icon ="grid">List All Music</a></li>
+        </ul>
+      </div>
+      <div class="myHeader">Organize your favorite Music</div>
+      <img class="center" id="image1" src="./images/Music.jpg" alt="nomusicnolifepicture"" class="center" >
+    </div>
+
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div class="newFont">
+        <h2> Music Makes Better People</h2>
+      </div>
+    </div>
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>(ง ͡ʘ ͜ʖ ͡ʘ)ง Copyright Of DK Industries 2021 (ง ͡ʘ ͜ʖ ͡ʘ)ง</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+  <div data-role="page" id="Load">
+    <!--  page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Add a Song</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home" data-icon="home">Home Page</a></li>
+          <li><a href="#Load" data-icon="plus" class='active-page'>Add a Song</a></li>
+          <li><a href="#ListMusic" data-icon="grid">List Your Music</a></li>
+          
+        </ul>
+      </div><!-- /navbar -->
+      <img class="center" id="image1" src="./images/Music.jpg" alt="nomusicnolifepicture" class="center">
+    </div>
+
+
+
+
+    <!-- page content -->
+  
+    <div data-role="content" data-theme="c">
+      <h2>Enter a new Song</h2>
+      Enter Song Name <br />
+      <input type="text" value="" id="song" />
+      Enter Artist<br />
+      <input type="text" value="" id="artist" />
+      Enter Album <br />
+      <input type="text" value="" id="album" />
+      Enter Music Genre
+      <input type="text" value="" id="genre" />
+      Enter Year Released <br />
+      <input type="text" value="" id="year" />
+      Enter YouTube URL <br />
+      <input type="text" value="" id="youtube" />
+      Enter Spotify URL <br />
+      <input type="text" value="" id="spotify" />
+      <input type="button" value="Add a Song" id="buttonAdd" data-inline="true"/>
+      <input type="button" value="Clear Values" id="buttonClear" data-inline="true" />
+    </div>
+
+       
+    
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>(ง ͡ʘ ͜ʖ ͡ʘ)ง Copyright Of DK Industries 2021 (ง ͡ʘ ͜ʖ ͡ʘ)ง</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+  <div data-role="page" id="ListMusic">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Music List</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+        <li><a href="#home" data-icon="home">Home Page</a></li>
+        <li><a href="#Load" data-icon="plus">Add a Song</a></li>
+        <li><a href="#ListMusic" class='active-page' data-icon="grid" >List Your Music</a></li>
+        
+         
+        </ul>
+      </div><!-- /navbar -->
+      
+      <img class="center" id="image1" src="./images/Music.jpg" alt="nomusicnolifepicture" class="center">
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='e' class = "body">
+      <div class="myHeader" >Your Music</div>
+      <div id="divMusic"></div>
+      <input type="button" value="Sort By Title" id="buttonSortTitle" data-inline="true" />
+      <input type="button" value="Sort By Genre" id="buttonSortGenre" data-inline="true" />
+      
+    </div>
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>(ง ͡ʘ ͜ʖ ͡ʘ)ง Copyright Of DK Industries 2021 (ง ͡ʘ ͜ʖ ͡ʘ)ง</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+  <!-- Start of  page -->
+  <div data-role="page" id="details">
+  
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>My Music Details</h1>
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home" data-icon="home">Home Page</a></li>
+          <li><a href="#Load" data-icon="plus">Add a Song</a></li>
+          <li><a href="#ListMusic" data-icon="grid">List Your Music</a></li>
+        </ul>
+      </div><!-- /navbar -->
+            <div class="myHeader"> My Music</div>
+            <img class="center" id="image1" src="./images/Music.jpg" alt="nomusicnolifepicture" class="center">
+    </div>
+  
+    <!--  content -->
+    <div data-role="content" data-theme='c' class = "details">
+      <h2> Here are the details</h2>
+      <p class = "red">Title: </p><span id="oneTitle"></span></p>
+      <p class = "red">Artist: </p><span id="oneArtist"></span></p>
+      <p class = "red">Album: </p><span id="oneAlbum"></span></p>
+      <p class = "red">Genre: </p><span id="oneGenre"></span></p>
+      <p class = "red">Release Year: </p><span id="oneYear"></span><p></p>
+      <span id = "oneYoutube" hidden></span>
+      <span id = "oneSpotify" hidden></span>
+      <!-- <p id="oneYoutube" hidden></p> -->
+      <!-- <p id="oneSpotify" hidden></p> -->
+      <i class="fab fa-youtube fa-3x " id = "openSpotify"></i>
+      <i class="fab fa-spotify fa-3x" id = "openYoutube"></i>
+      <input type="button" value="Delete" id="delete" style="background: rgb(216, 11, 11)"/>
+    </div>
+    
+
+    
+  
+    <!--    footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>(ง ͡ʘ ͜ʖ ͡ʘ)ง Copyright Of DK Industries 2021 (ง ͡ʘ ͜ʖ ͡ʘ)ง</h1>
+    </div>
+  
+  </div>
+
+
+
+  <div data-role="page" id="ListSome">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Music List By Genre</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home" data-icon="home">Home Page</a></li>
+          <li><a href="#Load" data-icon="plus">Add Music</a></li>
+          <li><a href="#ListMusic" data-icon="grid">List All Music</a></li>
+        </ul>
+      </div><!-- /navbar -->
+        <div class="myHeader"> Favorite Music</div>
+        <img class="center" id="image1" src="./images/Music.jpg" alt="nomusicnolifepicture" class="center">
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <p> Music by Genre</p>
+      <div id="divMusicListSubset"></div>
+      <input type="button" value="Show just Comedy" id="buttonSubsetComedy" data-inline="true" />
+      <input type="button" value="Show just Drama" id="buttonSubsetDrama" data-inline="true" />
+    </div>
+  
+  
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>(ง ͡ʘ ͜ʖ ͡ʘ)ง Copyright Of DK Industries 2021 (ง ͡ʘ ͜ʖ ͡ʘ)ง</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+  <p id="IDparmHere" hidden>change1</p>  <!--hidden, a place to stash the user ID -->
+</body>
+
+</html>
